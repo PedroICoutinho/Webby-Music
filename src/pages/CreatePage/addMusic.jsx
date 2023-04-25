@@ -1,6 +1,10 @@
 import { useState } from "react"
 import { api } from "../../utils/api"
 import {useNavigate} from "react-router-dom"
+import logo from "../../utils/image/logo.png"
+import style from "./style.module.css"
+import { Link } from "react-router-dom"
+
 
 export function CreatePage(){
     const[form, setForm] = useState({
@@ -34,11 +38,23 @@ export function CreatePage(){
 
     return(
         <>
+        <nav >
+        <Link to="/">
+        <img src={logo} alt="" />
+        </Link>
+        </nav>
+
+        
+       <div className={style.containerPrincipal}>
+        
+        <div className={style.tituloPrincipal}>  
         <h1>Add your music here! </h1>
-        <form onSubmit={handleSubmit}>
+        </div> 
+
+        <form  className={style.containerForms}  onSubmit={handleSubmit}>
             <label>Artist:</label>
             <input name="artista" value={form.artista} onChange={handleChange}/>
-            <label>Album cover:</label>
+            <label>Link album cover:</label>
             <input name="capa_album"  value={form.capa_album} onChange={handleChange}/>
             <label>Album name:</label>
             <input name="nome_album"  value={form.nome_album} onChange={handleChange}/>
@@ -51,8 +67,10 @@ export function CreatePage(){
             <label>Music Genre:</label>
             <input name="genero_musica" value={form.genero_musica} onChange={handleChange}/>
 
-            <button>Send</button>
+            <button className={style.buttonSend}>Send</button>
         </form>
+
+        </div>
         </>
     )
 }
