@@ -1,10 +1,16 @@
+import { Routes, Route } from "react-router-dom"
+import { CreatePage } from "./pages/CreatePage/addMusic"
+
 
 function App() {
   
   return (
     <>
-      <h1>Hello world
-      </h1>
+     <Routes>
+
+      <Route path="/create" element={<CreatePage />}/>
+
+     </Routes>
     </>
   )
 }
