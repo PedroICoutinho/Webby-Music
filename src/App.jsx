@@ -1,10 +1,20 @@
+import { Routes, Route } from "react-router-dom"
+import { CreatePage } from "./pages/CreatePage/addMusic"
+import Home from "./components/Home/Home"
+
+
+
 
 function App() {
   
   return (
     <>
-      <h1>Hello world
-      </h1>
+    <Home/>
+     <Routes>
+      
+      <Route path="/create" element={<CreatePage />}/>
+
+     </Routes>
     </>
   )
 }
