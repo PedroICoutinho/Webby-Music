@@ -1,0 +1,43 @@
+img{
+    width: 120px;
+    margin: 10px;
+}
+nav{
+    height: 60px;
+}
+
+.containerPrincipal{
+    background-color: #285A4E;
+    height: 100%;
+}
+
+.tituloPrincipal{
+    text-align: center;
+    color: white;
+    margin-bottom: 40px;
+    padding-top: 20px;
+}
+
+.containerForms{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  color: white;
+  font-size: 16pt;
+ 
+}
+
+input{
+    border-radius: 10px;
+    height: 60px;
+    border: #7F7F7F solid 3px;
+}
+
+.buttonSend{
+    border-radius: 20px;
+    border: none;
+    margin: 50px;
+    width: 400px;
+    color: #414040;
+}
