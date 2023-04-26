@@ -1,4 +1,5 @@
 import Carousel from 'react-bootstrap/Carousel';
+import { Container } from 'react-bootstrap';
 import { useState } from 'react';
 import rap from "../../assets/images/RAP.png";
 import rock from "../../assets/images/rock.png";
@@ -12,45 +13,45 @@ function ControlledCarousel() {
   };
 
   return (
+    <Container style={{backgroundColor:"var(--black)", height:"580px", width:"900px"}}>
     <Carousel activeIndex={index} onSelect={handleSelect}>
       <Carousel.Item>
-        <img
-          className="d-block w-100"
+        <img style={{height:"580px"}}
+          className=""
           src={rap}
           alt="First slide"
         />
         <Carousel.Caption>
-          <h3>First slide label</h3>
-          <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+          <h3>Discover Rap</h3>
+          <p>Click above to discover the best Rap has to offer</p>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
-        <img
+        <img style={{height:"580px",width:"900px"}}
           className="d-block w-100"
           src={rock}
           alt="Second slide"
         />
 
         <Carousel.Caption>
-          <h3>Second slide label</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          <h3>Discover Rock</h3>
+          <p>Click above to discover the best Rock has to offer</p>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
-        <img
+        <img style={{height:"580px", width:"900px"}}
           className="d-block w-100"
           src={edm}
           alt="Third slide"
         />
 
         <Carousel.Caption>
-          <h3>Third slide label</h3>
-          <p>
-            Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-          </p>
+          <h3>Discover EDM</h3>
+          <p>Click above to discover the best EDM has to offer</p>
         </Carousel.Caption>
       </Carousel.Item>
     </Carousel>
+    </Container>
   );
 }
 

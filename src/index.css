@@ -3,10 +3,14 @@
     --grey: #7f7f7f;
     --white: #ffffff;
     --light-green: #10c99f;
+    --black:#363C3B;
 }
 
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+body{
+    background-color: var(--black);
 }

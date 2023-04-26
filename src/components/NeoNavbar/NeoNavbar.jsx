@@ -1,24 +1,28 @@
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import webbyLogo from "../../assets/images/webby-logo.png"
+import finalLogo from "../../assets/images/webbfinal.png"
 
-function ColorSchemesExample() {
+function CollapsibleExample() {
   return (
-    <>
-      <Navbar style={{backgroundColor:"#ffffff"}}>
-        <Container>
-          <Navbar.Brand href="#home">
-            <img src={webbyLogo} alt="" style={{height:"100px", width:"100px"}} /></Navbar.Brand>
+    <Navbar collapseOnSelect expand="lg" bg="light" variant="light" style={{border:"1px solid black"}}>
+      <Container>
+        <Navbar.Brand href="#home">
+          <img src={finalLogo} style={{height:"50px", width:"50px"}}/>Webby Music</Navbar.Brand>
+        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+        <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="#home">Home</Nav.Link>
-            <Nav.Link href="#features">Charts</Nav.Link>
-            <Nav.Link href="#pricing">Genres</Nav.Link>
           </Nav>
-        </Container>
-      </Navbar>
-    </>
+          <Nav>
+            <Nav.Link href="#deets">Create</Nav.Link>
+            <Nav.Link eventKey={2} href="#memes">
+              Genres
+            </Nav.Link>
+          </Nav>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
   );
 }
 
-export default ColorSchemesExample;
+export default CollapsibleExample;
