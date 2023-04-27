@@ -2,6 +2,8 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import finalLogo from "../../assets/images/webbfinal.png"
+import { Link } from 'react-router-dom';
+
 
 function CollapsibleExample() {
   return (
@@ -14,7 +16,7 @@ function CollapsibleExample() {
           <Nav className="me-auto">
           </Nav>
           <Nav>
-            <Nav.Link href="#deets">Create</Nav.Link>
+           <Link to="/create"> <Nav.Link href="#deets">Create</Nav.Link></Link>
             <Nav.Link eventKey={2} href="#memes">
               Genres
             </Nav.Link>

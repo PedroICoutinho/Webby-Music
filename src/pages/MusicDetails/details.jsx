@@ -62,7 +62,7 @@ export function MusicDetails(){
 
     <div className={style.boxItens}>
         <h1>Music link:</h1>
-        <p>{music.attributes.link_musica}</p>
+        <Link to={music.attributes.link_musica}><p>{music.attributes.link_musica}</p></Link>
     </div>
 
     <div className={style.boxItens}>
