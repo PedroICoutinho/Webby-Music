@@ -1,9 +1,9 @@
 import { useParams, useNavigate, Link } from "react-router-dom"
 import {useState, useEffect} from "react"
 import {api} from "../../utils/api"
-import logo from "../../utils/image/logo.png"
 import style from "./style.module.css"
-
+import Footer from "../../components/Footer/Footer"
+import NeoNavbar from "../../components/NeoNavbar/NeoNavbar"
 
 export function MusicDetails(){
     const {musicId} = useParams()
@@ -31,9 +31,7 @@ export function MusicDetails(){
     }
 
     return( <>
-    <Link to="/">
-    <img src={logo} alt="" />
-    </Link>
+    <NeoNavbar/>
 
     <div className={style.boxItens}>
         <h1>Artist:</h1>
@@ -62,7 +60,7 @@ export function MusicDetails(){
 
     <div className={style.boxItens}>
         <h1>Music link:</h1>
-        <Link to={music.attributes.link_musica}><p>{music.attributes.link_musica}</p></Link>
+        <Link className="text-decoration-none" to={music.attributes.link_musica}><p>{music.attributes.link_musica}</p></Link>
     </div>
 
     <div className={style.boxItens}>
@@ -71,11 +69,12 @@ export function MusicDetails(){
     </div>
 
     <div className={style.buttonFlex}>
-        <Link to={`/edit/${musicId}`}>
+        <Link className="text-decoration-none" to={`/edit/${musicId}`}>
         <button className={style.buttonEdit}>Edit</button>
         </Link>
         <button onClick={handleDelete}  className={style.buttonDelete}>Delete</button>
     </div>
+    <Footer/>
     </>
     )
 }

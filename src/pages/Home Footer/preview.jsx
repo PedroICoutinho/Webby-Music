@@ -28,7 +28,7 @@ export function PreviewMusic() {
             return <>
                 <div className={style.musicPreview}>
                 <img src={currentElement.attributes.capa_album}/>
-                <Link to={`/webby-musics/${currentElement.id}`}>
+                <Link className="text-decoration-none" to={`/webby-musics/${currentElement.id}`}>
                 <p>{currentElement.attributes.nome_musica}</p>
                 </Link>
                 </div>

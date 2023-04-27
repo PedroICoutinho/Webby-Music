@@ -4,6 +4,11 @@ import {useNavigate, useParams} from "react-router-dom"
 import logo from "../../utils/image/logo.png"
 import style from "./style.module.css"
 import { Link } from "react-router-dom"
+import NeoNavbar from "../../components/NeoNavbar/NeoNavbar"
+import Container from 'react-bootstrap/Container';
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
+import Footer from "../../components/Footer/Footer"
 
 
 export function EditPage(){
@@ -49,11 +54,7 @@ export function EditPage(){
 
     return(
         <>
-        <nav >
-        <Link to="/">
-        <img src={logo} alt="" />
-        </Link>
-        </nav>
+        <NeoNavbar/>
 
         
        <div className={style.containerPrincipal}>
@@ -80,7 +81,7 @@ export function EditPage(){
 
             <button className={style.buttonSend}>Send</button>
         </form>
-
+      <Footer/>
         </div>
         </>
     )
