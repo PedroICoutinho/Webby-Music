@@ -7,8 +7,12 @@ const Home = () => {
   return (
     <>
     <NeoNavbar/>
+    <div className='mb-5'>
     <NeoCarousel/>
+    </div>
+    <div className='d-flex justify-content-center align-items-center bg-dark'>
     <PreviewMusic/>
+    </div>
     <Footer/>
     </>
   )

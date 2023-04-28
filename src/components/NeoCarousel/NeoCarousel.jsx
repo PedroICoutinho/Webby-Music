@@ -16,18 +16,18 @@ function ControlledCarousel() {
     <Container style={{backgroundColor:"var(--black)", height:"580px", width:"900px"}}>
     <Carousel activeIndex={index} onSelect={handleSelect}>
       <Carousel.Item>
-        <img style={{height:"580px"}}
+        <img style={{height:"570px", width:"900px"}}
           className=""
           src={rap}
           alt="First slide"
         />
         <Carousel.Caption>
           <h3>Discover Rap</h3>
-          <p>Click above to discover the best Rap has to offer</p>
+          <p className='text-light'>Click above to discover the best Rap has to offer</p>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
-        <img style={{height:"580px",width:"900px"}}
+        <img style={{height:"570px",width:"900px"}}
           className="d-block w-100"
           src={rock}
           alt="Second slide"
@@ -35,11 +35,11 @@ function ControlledCarousel() {
 
         <Carousel.Caption>
           <h3>Discover Rock</h3>
-          <p>Click above to discover the best Rock has to offer</p>
+          <p className='text-light'>Click above to discover the best Rock has to offer</p>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
-        <img style={{height:"580px", width:"900px"}}
+        <img style={{height:"570px", width:"900px"}}
           className="d-block w-100"
           src={edm}
           alt="Third slide"
@@ -47,7 +47,7 @@ function ControlledCarousel() {
 
         <Carousel.Caption>
           <h3>Discover EDM</h3>
-          <p>Click above to discover the best EDM has to offer</p>
+          <p className='text-light'>Click above to discover the best EDM has to offer</p>
         </Carousel.Caption>
       </Carousel.Item>
     </Carousel>
